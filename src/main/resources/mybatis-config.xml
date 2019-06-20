@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.smr.model.Func1" alias="Func1"></typeAlias>
+	</typeAliases>
+	<mappers>
+		<mapper resource="mapper/Func1Mapper.xml" />
+	</mappers>
+</configuration>

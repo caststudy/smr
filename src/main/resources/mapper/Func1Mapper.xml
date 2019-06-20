@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smr.mapper.Func1Mapper">
+
+
+	<select id="getById" parameterType="int" resultType="Func1">
+		SELECT  *  FROM func1	 		WHERE fld1 = #{id}
+	</select>
+
+	<resultMap type="Func1" id="Func1ResultSet">
+           <id property="fld1" column="fld1" />
+           <result property="fld2" column="fld2" />
+           <result property="fld3" column="fld3" />
+
+	</resultMap>
+
+       <select id="getAll" resultMap="Func1ResultSet" parameterType="Func1">
+           SELECT * FROM func1
+           <if test="fld2!=null ">
+               where  fld2 = #{fld2}
+           </if>
+
+       </select>
+
+
+
+</mapper>
