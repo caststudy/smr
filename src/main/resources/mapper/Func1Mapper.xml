@@ -6,7 +6,7 @@
 
 
 	<select id="getById" parameterType="int" resultType="Func1">
-		SELECT  *  FROM func1	 		WHERE fld1 = #{id}
+		SELECT  *  FROM flda	 		WHERE fld1 = #{id}
 	</select>
 
 	<resultMap type="Func1" id="Func1ResultSet">
@@ -17,7 +17,7 @@
 	</resultMap>
 
        <select id="getAll" resultMap="Func1ResultSet" parameterType="Func1">
-           SELECT * FROM func1
+           SELECT * FROM flda
            <if test="fld2!=null ">
                where  fld2 = #{fld2}
            </if>
